@@ -1,5 +1,6 @@
-import React from 'react'
+
 import { useStore } from './store/Store'
+import UserProfile from './UserProfile';
 
 const App = () => {
   const {count, decrement, increment,reset} = useStore();
@@ -9,6 +10,7 @@ const App = () => {
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>decrement</button>
       <button onClick={reset}>reset</button>
+      <UserProfile />
     </div>
   )
 }
