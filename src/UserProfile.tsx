@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useUserStore } from "./store/UserStore";
 
 const UserProfile = () => {
-  const { name, age, setName, setAge, resetUser } = useUserStore();
+  const { name, age, setName, setAge, resetUser,he } = useUserStore();
   const [newName, setNewName] = useState("");
   const [newAge, setNewAge] = useState(0);
 
@@ -11,6 +11,7 @@ const UserProfile = () => {
       <h1>User Profile</h1>
       <p>Name: {name}</p>
       <p>Age: {age}</p>
+      <p>he:{he}</p>
 
       <div style={{ margin: "10px" }}>
         <input
