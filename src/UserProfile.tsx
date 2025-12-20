@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useUserStore } from "./store/UserStore";
+import { userStore, useUserStore } from "./store/UserStore";
 
 const UserProfile = () => {
   const { name, age, setName, setAge, resetUser,count,setCount} = useUserStore();
   const [newName, setNewName] = useState("");
   const [newAge, setNewAge] = useState(0);
- 
+ const {name1,setName1} = userStore();
   
 
 
@@ -15,6 +15,8 @@ const UserProfile = () => {
       <p>Name: {name}</p>
       <p>Age: {age}</p>
       <p>count:{count}</p>
+      <p>{name1}</p>
+
       
 
       <div style={{ margin: "10px" }}>
@@ -40,6 +42,7 @@ const UserProfile = () => {
         Reset User
       </button>
       <button onClick={setCount}>count+</button>
+      <button onClick={()=> setName1(newName)}>setName</button>
     </div>
   );
 };

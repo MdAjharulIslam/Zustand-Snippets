@@ -1,5 +1,6 @@
 import { create } from "zustand";
-
+//update and increment methods in Zustand are different approaches to state changes,
+//  though both use the set function internally.
 interface UserStore {
   name: string;
   age: number;
@@ -19,3 +20,8 @@ export const useUserStore = create<UserStore>((set) => ({
   setAge: (newAge) => set({ age: newAge }),
   resetUser: () => set({ name: "Ajharul", age: 18,count:0 }),
 }));
+
+export const userStore = create((set)=>({
+  name1:"ajharul",
+  setName1:()=>(newName1:string)=> set({name1:newName1})
+}))
