@@ -1,6 +1,6 @@
 import { create } from "zustand";
 //update and increment methods in Zustand are different approaches to state changes,
-//  though both use the set function internally.
+//  though both use the set function internally. 
 interface UserStore {
   name: string;
   age: number;
