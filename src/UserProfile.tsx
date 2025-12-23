@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { userStore, useUserStore } from "./store/UserStore";
 
 const UserProfile = () => {
-  const { name, age, setName, setAge, resetUser,count,setCount} = useUserStore();
+  const { name, age, setName, setAge, resetUser,count,setCount,sex,setSex} = useUserStore();
   const [newName, setNewName] = useState("");
   const [newAge, setNewAge] = useState(0);
- const {name1,setName1} = userStore();
+  const [newSex, setNewSex] = useState("")
+
   
 
 
@@ -15,7 +16,7 @@ const UserProfile = () => {
       <p>Name: {name}</p>
       <p>Age: {age}</p>
       <p>count:{count}</p>
-      <p>{name1}</p>
+      <p>{sex}</p>
 
       
 
@@ -42,7 +43,12 @@ const UserProfile = () => {
         Reset User
       </button>
       <button onClick={setCount}>count+</button>
-      <button onClick={()=> setName1(newName)}>setName</button>
+      
+      <input type="text"
+      onChange={(e)=> setNewSex(e.target.value)} 
+      style={{margin:"10px"}} />
+      <button onClick={()=> setSex(newSex)}>setSex</button>
+
     </div>
   );
 };
