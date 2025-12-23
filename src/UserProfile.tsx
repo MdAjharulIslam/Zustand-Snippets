@@ -45,7 +45,7 @@ const UserProfile = () => {
       <button onClick={setCount}>count+</button>
       
       <input type="text"
-      onChange={(e)=> setNewSex(e.target.value)} 
+      onChange={(e)=> setNewSex(e.target.value)}  
       style={{margin:"10px"}} />
       <button onClick={()=> setSex(newSex)}>setSex</button>
 
