@@ -24,4 +24,4 @@ export const useUserStore = create<UserStore>((set) => ({
 export const userStore = create((set)=>({
   name1:"ajharul",
   setName1:()=>(newName1:string)=> set({name1:newName1})
-}))
+})) 
